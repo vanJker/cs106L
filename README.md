@@ -11,18 +11,18 @@ Please follow the [page][qt-guide] to install your cs106l environment.
 
 ## Schedule
 
-Legend:
-* CR: [Course Reader][cr]
-* PA: Programming Abstractions in C++
+**Note**: Default reading is [Course Reader][cr].   
+Legend:      
+* PA: Programming Abstractions in C++    
 
 | Week | Date | Lecture | Reading | Assignments |
 | :--: | :--: | :-----: | :-----: | :---------: |
-| 1 | Tue 1/7  | History and Philosophy of C++<br>[video][v1] [slides][l1] [code][c1] | CR:ch.0-2 |  |
-|   | Thu 1/9  | Streams<br>[video][v2] [slides][l2] [code][c2]                   | CR:ch.3   |  |
-| 2 | Tue 1/14 | Types and Advanced Streams<br>[video][v3] [slides][l3] [code[c3] | CR:p.429-431, p.441 + ch.3 |  |
-|   | Thu 1/16 | Sequence Containers<br>video [slides][l4] [code][c4]             | CR:ch.5 |  |
-| 3 | Tue 1/21 | Associative Containers<br>video [slides][l5] [code][c5]   | CR:ch.6 |  |
-|   | Thu 1/23 | Advanced Containers and Iterators<br>video [slides][l6] [code][c6] | CR:ch.6 |  |
+| 1 | Tue 1/7  | History and Philosophy of C++<br>[video][v1] [slides][l1] [code][c1] | ch.0-2 |  |
+|   | Thu 1/9  | Streams<br>[video][v2] [slides][l2] [code][c2] | ch.3   |  |
+| 2 | Tue 1/14 | Types and Advanced Streams<br>[video][v3] [slides][l3] [code[c3] | p.429-431, p.441 + ch.3 |  |
+|   | Thu 1/16 | Sequence Containers<br>video [slides][l4] [code][c4] | ch.5 | A1 Released |
+| 3 | Tue 1/21 | Associative Containers<br>video [slides][l5] [code][c5] | ch.6 |  |
+|   | Thu 1/23 | Advanced Containers and Iterators<br>video [slides][l6] [code][c6] | ch.6 |  |
 
 
 [win20]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/
