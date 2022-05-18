@@ -12,7 +12,7 @@ Please follow the [page][qt-guide] to install your cs106l environment.
 ## Schedule
 
 Legend:
-* CR: Course Reader
+* CR: [Course Reader][cr]
 * PA: Programming Abstractions in C++
 
 | Week | Date | Lecture | Reading | Assignments |
@@ -26,7 +26,7 @@ Legend:
 
 
 [win20]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/
-[qy-guide]: https://web.stanford.edu/dept/cs_edu/resources/qt/
+[qt-guide]: https://web.stanford.edu/dept/cs_edu/resources/qt/
 [cr]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/handouts/course_reader.pdf
 [guide]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/handouts/guide.pdf
 
