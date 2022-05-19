@@ -6,7 +6,9 @@ Self learning of Stanford's [CS106L Winter 2020][win20].
 
 ## Qt Installation Guide
 
-Please follow the [page][qt-guide] to install your cs106l environment.
+Please follow the [page][qt-guide] to install your cs106l environment.   
+Then follow this [page](https://web.stanford.edu/dept/cs_edu/resources/qt/recommended-settings) to 
+setup recommended settings for Qt Creator.
 
 
 ## Schedule
