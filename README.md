@@ -21,8 +21,8 @@ Legend:
 | :--: | :--: | :-----: | :-----: | :---------: |
 | 1 | Tue 1/7  | History and Philosophy of C++<br>[video][v1] [slides][l1] [code][c1] | ch.0-2 |  |
 |   | Thu 1/9  | Streams<br>[video][v2] [slides][l2] [code][c2] | ch.3   |  |
-| 2 | Tue 1/14 | Types and Advanced Streams<br>[video][v3] [slides][l3] [code[c3] | p.429-431, p.441 + ch.3 |  |
-|   | Thu 1/16 | Sequence Containers<br>video [slides][l4] [code][c4] | ch.5 | A1 Released |
+| 2 | Tue 1/14 | Types and Advanced Streams<br>[video][v3] [slides][l3] [code][c3] | p.429-431, p.441 + ch.3 |  |
+|   | Thu 1/16 | Sequence Containers<br>video [slides][l4] [code][c4] | ch.5 | A1 Released<br>[spec][a1-spec] [zip][a1-zip] |
 | 3 | Tue 1/21 | Associative Containers<br>video [slides][l5] [code][c5] | ch.6 |  |
 |   | Thu 1/23 | Advanced Containers and Iterators<br>video [slides][l6] [code][c6] | ch.6 |  |
 
@@ -49,3 +49,6 @@ Legend:
 [c4]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/lectures/sequence_containers/lecture3-sequence.zip
 [c5]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/lectures/4_associative_containers/4_associative_containers.zip
 [c6]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/lectures/5_advanced_containers_iterators/5_advanced_containers_iterators.zip
+
+[a1-spec]: https://docs.google.com/document/d/1B4NvKY11310qqVBX7mlrPR91j3uayKi1uSHls0aqrz8/edit    
+[a1-zip]: https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1204/assignments/A1.zip
