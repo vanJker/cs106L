@@ -35,6 +35,7 @@ void InitDelta(SimpleGraph& graph, Delta& delta);
 void RepulsiveForce(SimpleGraph& graph, Delta& delta);
 void AttractiveForce(SimpleGraph& graph, Delta& delta);
 void MovePosition(SimpleGraph& graph, Delta& delta);
+double DistanceSquare(Node node0, Node node1);
 
 
 // Main method
@@ -124,10 +125,10 @@ int ReadGraph(ifstream& ifs, SimpleGraph& graph) {
     ifs >> n;
     // set nodes
     for (size_t i = 0; i < n; ++i)
-        graph.nodes.push_back(Node{0.0, 0.0});
+        graph.nodes.push_back({0.0, 0.0});
     // set edges
     while (ifs >> v >> u)
-        graph.edges.push_back(Edge{v, u});
+        graph.edges.push_back({v, u});
     return n;
 }
 
@@ -150,20 +151,17 @@ void InitDelta(SimpleGraph& graph, Delta& delta) {
 
 /* Compute repulsive forces. */
 void RepulsiveForce(SimpleGraph& graph, Delta& delta) {
-    double x0, y0;
-    double x1, y1;
     double Frepel;
     double theta;
 
     size_t n = graph.nodes.size();
     for (size_t i = 0; i < n; ++i) {
         for (size_t j = i + 1; j < n; ++j) {
-            x0 = graph.nodes[i].x;
-            y0 = graph.nodes[i].y;
-            x1 = graph.nodes[j].x;
-            y1 = graph.nodes[j].y;
+           // Modern C++
+            auto [x0, y0] = graph.nodes[i];
+            auto [x1, y1] = graph.nodes[j];
 
-            Frepel = krepel / sqrt((y1-y0)*(y1-y0) + (x1-x0)*(x1-x0));
+            Frepel = krepel / sqrt(DistanceSquare(graph.nodes[i], graph.nodes[j]));
             theta = atan2(y1 - y0, x1 - x0);
             delta.dx[i] -= Frepel * cos(theta);
             delta.dy[i] -= Frepel * sin(theta);
@@ -175,20 +173,15 @@ void RepulsiveForce(SimpleGraph& graph, Delta& delta) {
 
 /* Compute attractive forces. */
 void AttractiveForce(SimpleGraph& graph, Delta& delta) {
-    Node node0, node1;
-    double x0, y0;
-    double x1, y1;
     double Fattract;
     double theta;
 
     for (Edge edge : graph.edges) {
-        node0 = graph.nodes[edge.start];
-        node1 = graph.nodes[edge.end];
+        // Modern C++
+        auto [x0, y0] = graph.nodes[edge.start];
+        auto [x1, y1] = graph.nodes[edge.end];
 
-        x0 = node0.x; y0 = node0.y;
-        x1 = node1.x; y1 = node1.y;
-
-        Fattract = kattract * ((y1-y0)*(y1-y0) + (x1-x0)*(x1-x0));
+        Fattract = kattract * DistanceSquare(graph.nodes[edge.start], graph.nodes[edge.end]);
         theta = atan2(y1 - y0, x1 - x0);
         delta.dx[edge.start] += Fattract * cos(theta);
         delta.dy[edge.start] += Fattract * sin(theta);
@@ -204,6 +197,12 @@ void MovePosition(SimpleGraph& graph, Delta& delta) {
         graph.nodes[i].x += delta.dx[i];
         graph.nodes[i].y += delta.dy[i];
     }
+}
+
+/* Compute square of distance between node0 and node1. */
+double DistanceSquare(Node node0, Node node1) {
+    return (node1.y - node0.y) * (node1.y - node0.y)
+            + (node1.x - node0.x) * (node1.x - node0.x);
 }
 
 
