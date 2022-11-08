@@ -9,7 +9,6 @@ using std::string;          using std::unordered_set;
 
 // some useful functions
 using std::ifstream;
-unordered_set<string> links;
 string fileToString(ifstream& file);
 unordered_set<string> findWikiLinks(const string& page_html);
 
@@ -30,7 +29,7 @@ int main() {
 
     // print valid wiki links
     string page_html = fileToString(ifs);
-    findWikiLinks(page_html);
+    unordered_set<string> links = findWikiLinks(page_html);
     for (string link : links) {
         cout << link << endl;
     }
@@ -68,6 +67,7 @@ string fileToString(ifstream& file) {
 }
 
 unordered_set<string> findWikiLinks(const string& page_html) {
+    unordered_set<string> links;
     string toFind = "href=\"/wiki/";
     auto curr = page_html.begin();
     auto end = page_html.end();

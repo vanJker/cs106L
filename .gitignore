@@ -1,2 +1,5 @@
 build-*/
 *.pro.user
+handout*/
+08*/
+*zips/
